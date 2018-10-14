@@ -12,6 +12,7 @@
 		9D19429F216CFCDA00B727BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D19429D216CFCDA00B727BB /* Main.storyboard */; };
 		9D1942A1216CFCDB00B727BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D1942A0216CFCDB00B727BB /* Assets.xcassets */; };
 		9D1942A4216CFCDB00B727BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D1942A2216CFCDB00B727BB /* LaunchScreen.storyboard */; };
+		9D34493F21711E270084D0A1 /* CustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D34493E21711E270084D0A1 /* CustomViewController.swift */; };
 		9D8ED973216FA20A005DD9F5 /* Select Difficulty View Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8ED972216FA20A005DD9F5 /* Select Difficulty View Controller.swift */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +24,7 @@
 		9D1942A0216CFCDB00B727BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9D1942A3216CFCDB00B727BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9D1942A5216CFCDB00B727BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9D34493E21711E270084D0A1 /* CustomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewController.swift; sourceTree = "<group>"; };
 		9D8ED972216FA20A005DD9F5 /* Select Difficulty View Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Select Difficulty View Controller.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -59,6 +61,7 @@
 				9D194299216CFCDA00B727BB /* AppDelegate.swift */,
 				9D19429B216CFCDA00B727BB /* ViewController.swift */,
 				9D8ED972216FA20A005DD9F5 /* Select Difficulty View Controller.swift */,
+				9D34493E21711E270084D0A1 /* CustomViewController.swift */,
 				9D19429D216CFCDA00B727BB /* Main.storyboard */,
 				9D1942A0216CFCDB00B727BB /* Assets.xcassets */,
 				9D1942A2216CFCDB00B727BB /* LaunchScreen.storyboard */,
@@ -141,6 +144,7 @@
 				9D8ED973216FA20A005DD9F5 /* Select Difficulty View Controller.swift in Sources */,
 				9D19429C216CFCDA00B727BB /* ViewController.swift in Sources */,
 				9D19429A216CFCDA00B727BB /* AppDelegate.swift in Sources */,
+				9D34493F21711E270084D0A1 /* CustomViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

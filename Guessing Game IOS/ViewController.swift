@@ -10,7 +10,16 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    //MARK: UI Outlets
+    //MARK: LifeCycle
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        var randomNumber = Int.random(in: minimum ... maximum)
+        InstructionsLabel.text = "Please enter a number between \(minimum) and \(maximum)"
+        // Do any additional setup after loading the view, typically from a nib.
+        
+    }
+    
+    //MARK: IB Outlets
     @IBOutlet weak var GuessTextField: UITextField!
     @IBOutlet weak var GuessButton: UIButton!
     @IBOutlet weak var FeedbackLabel: UILabel!
@@ -101,14 +110,5 @@ class ViewController: UIViewController {
             FeedbackLabel.text = "You didn’t give me a number..."
             return
         }
-    }
-    
-    //MARK: Lifestyles
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        var randomNumber = Int.random(in: minimum ... maximum)
-        InstructionsLabel.text = "Please enter a number between \(minimum) and \(maximum)"
-        // Do any additional setup after loading the view, typically from a nib.
-        
     }
 }
