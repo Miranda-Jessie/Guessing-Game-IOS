@@ -16,7 +16,7 @@ class ViewController: UIViewController {
         var randomNumber = Int.random(in: minimum ... maximum)
         InstructionsLabel.text = "Please enter a number between \(minimum) and \(maximum)"
         // Do any additional setup after loading the view, typically from a nib.
-        
+        GuessesLeftLabel.text = "You have \(guessesLeft) guesses left."
     }
     
     //MARK: IB Outlets
@@ -62,7 +62,7 @@ class ViewController: UIViewController {
     var minimum = 1
     var maximum = 100
     var guessesLeft = 5
-    var randomNumber = 0
+    var randomNumber = Int.random(in: 1...100)
     
     //MARK: Functions
     func setupUIForRestart() {

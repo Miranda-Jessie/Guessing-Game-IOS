@@ -7,22 +7,30 @@
 //
 
 import UIKit
-    class CustomVeiwController: UIViewController {
-        
+class CustomVeiwController: UIViewController {
+    
         //Custom IBOutlets
         @IBOutlet weak var customMaxNumber: UITextField!
         @IBOutlet weak var customGuesses: UITextField!
-        
-        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-            guard let guessingGameVeiwController = segue.destination as? ViewController else
-            {return}
-            
-            switch segue.identifier {
-            case "CustomVeiwController":
-                guessingGameVeiwController.guessesLeft = Int(customGuesses.text!)!
-                guessingGameVeiwController.maximum = Int(customMaxNumber.text!)!
-            default:
-                break
-            }
+        @IBOutlet weak var startButton: UIButton!
+    
+    //Mark: Actions
+    @IBAction func startButtonPressed(_ sender: Any) {
+        performSegue(withIdentifier: "CustomtoView", sender: sender)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let guessingGameViewController = segue.destination as?  ViewController else
+        {return}
+        switch segue.identifier {
+        case "CustomtoView":
+            guessingGameViewController.minimum = 1
+            guessingGameViewController.maximum = (Int(customMaxNumber.text!)!)
+            guessingGameViewController.guessesLeft = (Int(customGuesses.text!)!)
+        default:
+            break
         }
+        
+        
+    }
 }

@@ -17,14 +17,17 @@ class SelectDifficultyViewController: UIViewController {
         switch segue.identifier {
         case "EasyToGuessingGame":
             //Max 50
+            guessingGameviewController.minimum = 1
             guessingGameviewController.maximum = 50
             
         case "MediumToGuessingGame":
             //Max 100
+            guessingGameviewController.minimum = 1
             guessingGameviewController.maximum = 100
             
         case "HardToGuessingGame":
             //Max 500
+            guessingGameviewController.minimum = 1
             guessingGameviewController.maximum = 500
             
         default:

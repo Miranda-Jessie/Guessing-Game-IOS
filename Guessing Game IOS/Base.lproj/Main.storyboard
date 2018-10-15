@@ -60,6 +60,9 @@
                                         <state key="normal" title="Custom">
                                             <color key="titleColor" red="0.98433202239999995" green="0.99963425829999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="G4s-lf-IEu" kind="show" identifier="Custom Page  " id="lEI-bo-NL4"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -84,7 +87,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qQm-Bq-ReC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1076" y="2"/>
+            <point key="canvasLocation" x="-1087" y="188"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -149,6 +152,14 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cdf-hM-tLs">
+                                <rect key="frame" x="16" y="20" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <segue destination="Sj6-YJ-uS4" kind="show" identifier="Back Button" id="lMd-IZ-Nq0"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -170,32 +181,94 @@
             </objects>
             <point key="canvasLocation" x="-239" y="-143"/>
         </scene>
-        <!--View Controller-->
+        <!--Custom Veiw Controller-->
         <scene sceneID="Shw-fN-9Ib">
             <objects>
-                <viewController id="G4s-lf-IEu" sceneMemberID="viewController">
+                <viewController id="G4s-lf-IEu" customClass="CustomVeiwController" customModule="Guessing_Game_IOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ni1-hp-HD1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Custom" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H3c-RT-50e">
-                                <rect key="frame" x="157" y="40" width="60" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="dzo-Hk-RFw">
+                                <rect key="frame" x="89.5" y="80.5" width="196.5" height="295"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="41" translatesAutoresizingMaskIntoConstraints="NO" id="3Nr-rl-WNl">
+                                        <rect key="frame" x="0.0" y="0.0" width="196.5" height="295"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Number of Guesses" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NH4-Bw-v4t">
+                                                <rect key="frame" x="0.0" y="0.0" width="196.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5HX-6p-MMp">
+                                                <rect key="frame" x="81.5" y="61.5" width="33.5" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Maximum Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mhg-kR-pix">
+                                                <rect key="frame" x="28" y="132.5" width="140.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="U8h-eu-kqC">
+                                                <rect key="frame" x="81.5" y="194" width="33.5" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l1E-Qu-S13">
+                                                <rect key="frame" x="61.5" y="265" width="73" height="30"/>
+                                                <state key="normal" title="Customize"/>
+                                                <connections>
+                                                    <action selector="startButtonPressed:" destination="G4s-lf-IEu" eventType="touchUpInside" id="cwu-9f-72n"/>
+                                                    <segue destination="BYZ-38-t0r" kind="show" identifier="CustomtoView" id="Gwn-ZK-aBc"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Custom Guessing Game" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H3c-RT-50e">
+                                <rect key="frame" x="95" y="40" width="185" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E2S-3i-6GE">
+                                <rect key="frame" x="16" y="20" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <segue destination="Sj6-YJ-uS4" kind="show" identifier="Back Button" id="K4x-WO-Pav"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="H3c-RT-50e" firstAttribute="top" secondItem="aeZ-kH-Y7o" secondAttribute="top" constant="20" id="6qM-1Y-Vlb"/>
+                            <constraint firstItem="H3c-RT-50e" firstAttribute="centerX" secondItem="ni1-hp-HD1" secondAttribute="centerX" id="WbD-2v-cf5"/>
+                            <constraint firstItem="H3c-RT-50e" firstAttribute="centerX" secondItem="ni1-hp-HD1" secondAttribute="centerX" id="cX6-mA-Ryu"/>
+                            <constraint firstItem="dzo-Hk-RFw" firstAttribute="top" secondItem="H3c-RT-50e" secondAttribute="bottom" constant="20" id="czp-iq-VvZ"/>
+                            <constraint firstItem="dzo-Hk-RFw" firstAttribute="centerX" secondItem="ni1-hp-HD1" secondAttribute="centerX" id="zHd-Nk-RHi"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="aeZ-kH-Y7o"/>
                     </view>
+                    <connections>
+                        <outlet property="customGuesses" destination="5HX-6p-MMp" id="Xvl-V1-dax"/>
+                        <outlet property="customMaxNumber" destination="U8h-eu-kqC" id="2s9-gf-CKm"/>
+                        <outlet property="startButton" destination="l1E-Qu-S13" id="LPK-ue-AiX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xbl-s8-c39" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-239" y="609"/>
+            <point key="canvasLocation" x="-239" y="525"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="k39-Lp-Pdl"/>
+        <segue reference="Rm9-Mz-zE5"/>
+        <segue reference="K4x-WO-Pav"/>
     </inferredMetricsTieBreakers>
 </document>
