@@ -27,6 +27,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var PlayAgainButton: UIButton!
     @IBOutlet weak var InstructionsLabel: UILabel!
     
+    //MARK: Properties
+    var minimum = 1
+    var maximum = 100
+    var guessesLeft = 5
+    var randomNumber = Int.random(in: 1...100)
+    
     //MARK: Functions
     func makeAGuess(guess: Int) {
         guessesLeft -= 1
@@ -58,11 +64,6 @@ class ViewController: UIViewController {
     @IBAction func playAgainButtonTapped(_ sender: Any) {
         restart()
     }
-    //MARK: Properties
-    var minimum = 1
-    var maximum = 100
-    var guessesLeft = 5
-    var randomNumber = Int.random(in: 1...100)
     
     //MARK: Functions
     func setupUIForRestart() {

@@ -7,10 +7,11 @@
 //
 
 import UIKit
-class CustomVeiwController: UIViewController {
+class CustomViewController: UIViewController {
     
         //Custom IBOutlets
         @IBOutlet weak var customMaxNumber: UITextField!
+        @IBOutlet weak var customMinimumNumber: UITextField!
         @IBOutlet weak var customGuesses: UITextField!
         @IBOutlet weak var startButton: UIButton!
     
@@ -24,13 +25,11 @@ class CustomVeiwController: UIViewController {
         {return}
         switch segue.identifier {
         case "CustomtoView":
-            guessingGameViewController.minimum = 1
+            guessingGameViewController.minimum = (Int(customMinimumNumber.text!)!)
             guessingGameViewController.maximum = (Int(customMaxNumber.text!)!)
             guessingGameViewController.guessesLeft = (Int(customGuesses.text!)!)
         default:
             break
         }
-        
-        
     }
 }
